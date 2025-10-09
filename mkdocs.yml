@@ -1,0 +1,44 @@
+site_name: (OV-Panel) Documentation
+site_url: https://github.com/primeZdev/ov-panel
+repo_url: https://github.com/primeZdev/ov-panel
+repo_name: OV-Panel
+repo_badge: true
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  features:
+    - content.code.copy
+    - content.code.annotate
+    - navigation.top
+    - navigation.tabs
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/primeZdev/ov-panel
+      name: GitHub
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/ovpanel
+      name: Telegram
