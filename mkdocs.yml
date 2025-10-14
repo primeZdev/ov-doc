@@ -3,7 +3,14 @@ site_url: https://github.com/primeZdev/ov-panel
 repo_url: https://github.com/primeZdev/ov-panel
 repo_name: OV-Panel
 repo_badge: true
-
+nav:
+  - Home: index.md
+  - Installation:
+    - Panel:
+      - 🚀 Install gu: installation/Panel/install.md
+      - ⚙️ Configuration: installation/Panel/configuration.md
+    - Node:
+      - 🚀 Install: installation/Node/install.md
 theme:
   name: material
   logo: assets/logo.png
@@ -18,14 +25,14 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
+      primary: orange
       accent: deep orange
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
+      primary: orange
       accent: deep orange
       toggle:
         icon: material/brightness-4
