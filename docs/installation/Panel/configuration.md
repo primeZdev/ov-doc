@@ -38,7 +38,7 @@ PORT=9000
 
 # Developer options (optional)
 #DEBUG=INFO
-#DOCS=docs
+#DOC=True
 ```
 
 ---
@@ -92,4 +92,4 @@ sudo systemctl restart ov-panel
 | Variable | Description |
 |----------|-------------|
 | `DEBUG` | Logging level. One of: `DEBUG`, `INFO` (default), `WARNING`, `ERROR`, `CRITICAL`. Example: `DEBUG=INFO`. Set to `DEBUG` for verbose output useful when troubleshooting. |
-| `DOCS` | Path to documentation folder if you’re serving local docs (default: `docs`). |
+| `DOC` | API documentation |

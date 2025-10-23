@@ -1,20 +1,19 @@
-site_name: (OV-Panel) Documentation
+site_name: OVPanel Documentation
 site_url: https://github.com/primeZdev/ov-panel
 repo_url: https://github.com/primeZdev/ov-panel
 repo_name: OV-Panel
-repo_badge: true
 nav:
   - Home: index.md
   - Installation:
     - Panel:
-      - 🚀 Install gu: installation/Panel/install.md
+      - 🚀 Installation guide: installation/Panel/install.md
       - ⚙️ Configuration: installation/Panel/configuration.md
     - Node:
-      - 🚀 Install: installation/Node/install.md
+      - 🚀 Installation guide: installation/Node/install.md
 theme:
   name: material
   logo: assets/logo.png
-  favicon: assets/favicon.ico
+  favicon: assets/fav.svg
   features:
     - content.code.copy
     - content.code.annotate
@@ -25,14 +24,14 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: orange
+      primary: black
       accent: deep orange
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: orange
+      primary: black
       accent: deep orange
       toggle:
         icon: material/brightness-4
@@ -40,6 +39,9 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
+
+extra_css:
+  - assets/stylesheets/theme-overrides.css
 
 extra:
   social:
