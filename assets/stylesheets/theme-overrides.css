@@ -1,0 +1,17 @@
+/* Theme overrides: make active navigation link orange */
+
+/* Material: active nav link */
+.md-nav__link--active {
+  color: #ff8a3d !important; /* orange accent */
+  font-weight: 600;
+}
+
+/* For nested nav items (expanded) */
+.md-nav__link--active .md-nav__title {
+  color: #ff8a3d !important;
+}
+
+/* Ensure hover uses the same accent */
+.md-nav__link:hover {
+  color: #ff8a3d !important;
+}
