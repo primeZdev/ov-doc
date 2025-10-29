@@ -1,5 +1,7 @@
 # Overview
-
+<div align="center">
+	<img src="assets/screenshot1.png" alt="ov panel">
+</div>
 **OVPanel** is an open-source, powerful and modern web application designed to create, manage, and monitor OVPN clients across multiple servers.  
 It provides an intuitive dashboard, automation tools, and API integration to make server and user management simple and efficient.
 
