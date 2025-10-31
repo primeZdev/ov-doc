@@ -10,5 +10,5 @@ The documentation is built using **MkDocs** and hosted on **GitHub Pages**.
 ## 🌍 Live Documentation
 
 👉 **Read it online:** 
-[https://primeZdev.github.io/ov-panel-docs/](https://primeZdev.github.io/ov-doc/)
+[https://primeZdev.github.io/ov-docs/](https://primeZdev.github.io/ov-doc/)
 
