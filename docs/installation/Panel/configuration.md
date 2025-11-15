@@ -12,33 +12,39 @@ sudo nano /opt/ov-panel/.env
 
 2. Make your changes and save the file.
 
-3. Restart the panel service (example for systemd):
+3. Restart the panel service :
 
 ```bash
-sudo systemctl restart ov-panel
+bash <(curl -s https://raw.githubusercontent.com/primeZdev/ov-panel/main/install.sh)
 ```
 
-The `.env` file is located in the root of your installation directory (for example: `/opt/ov-panel/.env`).
+The `.env` file is located in to (`/opt/ov-panel/.env`).
 
 ---
 
 ### 🧾 Example `.env` file
 ```env
-# Admin credentials
+# Admin Credentials
 ADMIN_USERNAME=admin
 ADMIN_PASSWORD=admin
 
-# Panel settings
+# UVICORN Settings
+HOST=0.0.0.0
 URLPATH=dashboard
+VITE_URLPATH=dashboard
 PORT=9000
 
-# SSL settings (optional)
-#SSL_KEYFILE=/path/to/keyfile
-#SSL_CERTFILE=/path/to/certfile
+### Ssl Configuration
+# SSL_KEYFILE="/path/to/keyfile"
+# SSL_CERTFILE="/path/to/certfile"
 
-# Developer options (optional)
-#DEBUG=INFO
-#DOC=True
+### Development Settings
+# DEBUG=INFO
+# DOC=True
+
+### Security Settings
+JWT_SECRET_KEY="random string here" # change this to a secure random string
+JWT_ACCESS_TOKEN_EXPIRES=86400 # in seconds
 ```
 
 ---
@@ -56,7 +62,7 @@ PORT=9000
 #### ⚙️ Panel Settings
 | Variable | Description |
 |----------|-------------|
-| `URLPATH` | The path used in your panel URL (default: `dashboard`). |
+| `URLPATH` and  `VITE_URLPATH`| The path used in your panel URL (default: `dashboard`). |
 | `PORT` | The port number the OV Panel runs on (default: `9000`). |
 
 Example access URL:
@@ -79,14 +85,6 @@ Example:
 SSL_KEYFILE=/etc/letsencrypt/live/yourdomain.com/privkey.pem
 SSL_CERTFILE=/etc/letsencrypt/live/yourdomain.com/fullchain.pem
 ```
-
-Then restart the panel service (example for systemd):
-
-```bash
-sudo systemctl restart ov-panel
-```
-
----
 
 #### 🛠 Developer Options (Optional)
 | Variable | Description |

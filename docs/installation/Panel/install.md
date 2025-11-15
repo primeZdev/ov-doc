@@ -1,40 +1,98 @@
 # 🚀 Panel Installation Guide
 
-OV-Panel can be easily installed on your server using the official automated script.  
-This guide will walk you through everything you need to get started.
+OV-Panel can be easily installed on your server using the official automated script. This guide will walk you through everything you need to get started.
 
 ---
 
-## 🧩 Requirements
-
-Before installation, make sure your server meets the following requirements:
+## 📋 Prerequisites
+### System Requirements
 
 | Requirement | Description |
-|--------------|-------------|
-| 💻 **Operating System** | Ubuntu 20.04+ (Debian-based) |
-| 🧠 **Minimum RAM** | 2 GB |
-| 🌐 **Domain or Subdomain** | Must be pointed to your server’s IP |
-| ⚙️ **Privileges** | Root access or a user with `sudo` permissions |
+|-------------|-------------|
+| 💻 **Operating System** | Ubuntu 20.04+ / Debian 11+ (Recommended) |
+| 🖥️ **CPU** | 1 core minimum (2+ cores recommended) |
+| 🧠 **RAM** | 2 GB minimum (4 GB recommended) |
+| 💾 **Storage** | 10 GB free space |
+| 🌐 **Network** | Stable internet connection |
+| 🔑 **Access** | Root access or user with `sudo` privileges |
+| 🌍 **Domain** | Domain or subdomain pointed to server IP (optional but recommended) |
+
+- tip "Pro Tip"
+    Using a domain with SSL certificate is highly recommended for security and better user experience.
 
 ---
 
-## 🛠️ Installation
+## 🛠️ Installation Steps
 
-To install OV-Panel, simply run the following command in your server terminal:
+### Step 1: Run the Installation Script
+
+Connect to your server via SSH and run the following command:
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/primeZdev/ov-panel/main/install.sh)
 ```
 
+- info What happens during installation?
+    - Install required dependencies
+    - Download and configure OV-Panel
+    - Set up the database
+    - Create initial configuration files
+    - Start the panel service
+
+- Once installation is complete, you can access your panel:
+    -     ```
+    http://YOUR_SERVER_IP:port/path
+    ```
+---
+
+## 🌐 SSL Certificate Setup (Recommended)
+### Option 1: Using Certbot (Free SSL)
+
+```bash
+# Install Certbot
+sudo apt update
+sudo apt install certbot
+
+# Generate certificate
+sudo certbot certonly --standalone -d your-domain.com
+```
+
+### Option 2: Using Cloudflare
+
+1. Point your domain to Cloudflare DNS
+2. Enable "Full (strict)" SSL mode in Cloudflare
+3. Use Cloudflare Origin Certificate
+
+### Update Panel Configuration
+
+After obtaining your SSL certificate, update the `.env` file:
+
+```bash
+nano /opt/ov-panel/.env
+```
+
+Add or update these lines:
+
+```bash
+SSL_KEYFILE=/path/to/your/certificate.crt
+SSL_CERTFILE=/path/to/your/private.key
+```
+
+Restart the panel:
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/primeZdev/ov-panel/main/install.sh)
+```
+
+---
 
 
-### 🌐 Using a Domain (Optional but Recommended)
+## 🔧 Post-Installation
 
-If you want to access your panel using a **domain or subdomain** instead of an IP address:
+After successful installation, proceed to:
 
-1. Make sure your **domain is pointed** to your server’s IP address (using an **A record**).  
-2. Install an **SSL certificate** for your domain (for example, using **Certbot** or **Nginx Proxy Manager**).  
-3. Open your `.env` file located at `/opt/ov-panel` and update ssl path.
-4. Save the file and restart the panel to apply the changes:  
+- **[Install Nodes](../Node/install.md)** - Add servers to your network
+- **[Configure Panel](configuration.md)** - Customize settings and preferences
 
-> 💡 **Tip:** Using HTTPS improves security and prevents login or session issues.
+---
+

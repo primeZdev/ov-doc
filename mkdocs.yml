@@ -3,13 +3,14 @@ site_url: https://github.com/primeZdev/ov-panel
 repo_url: https://github.com/primeZdev/ov-panel
 repo_name: OV-Panel
 nav:
-  - Home: index.md
-  - Installation:
+  - 🏠 Home: index.md
+  - 📥 Installation:
     - Panel:
       - 🚀 Installation guide: installation/Panel/install.md
       - ⚙️ Configuration: installation/Panel/configuration.md
     - Node:
-      - 🚀 Installation guide: installation/Node/install.md
+      - 🚀 Installation guide: installation/node/install.md
+  - ⭐ Awesome: awesome/index.md
 theme:
   name: material
   logo: assets/logo.png
