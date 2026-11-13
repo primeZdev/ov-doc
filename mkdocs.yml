@@ -9,7 +9,7 @@ nav:
       - 🚀 Installation guide: installation/Panel/install.md
       - ⚙️ Configuration: installation/Panel/configuration.md
     - Node:
-      - 🚀 Installation guide: installation/node/install.md
+      - 🚀 Installation guide: installation/Node/install.md
   - ⭐ Awesome: awesome/index.md
 theme:
   name: material
