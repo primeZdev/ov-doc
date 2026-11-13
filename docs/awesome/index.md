@@ -34,6 +34,33 @@ Tools for backing up and restoring your OV-Panel database and OV_nodes configura
 
 ---
 
+## 📦 OvTemplates
+
+Custom templates for subscription pages on OV-Panel.
+
+<div class="project-container">
+  <div class="project-header">
+    <img src="https://raw.githubusercontent.com/erfjab/OvTemplates/master/OvTemplates.png" alt="OvTemplates" class="project-logo">
+    <div class="project-info">
+      <h3>OvTemplates</h3>
+      <p><strong>by</strong> <a href="https://github.com/erfjab">erfjab</a></p>
+    </div>
+  </div>
+  
+  <p>Custom templates for subscription pages.</p>
+  
+  <p><strong>Features:</strong></p>
+  <ul>
+    <li>🎨 Custom subscription page templates</li>
+    <li>📄 Easy to use and customize</li>
+    <li>🌐 Ready-to-use designs</li>
+  </ul>
+  
+  <a href="https://github.com/erfjab/OvTemplates" target="_blank" class="md-button md-button--primary">View on GitHub</a>
+</div>
+
+---
+
 ### 🎯 Add Your Project
 
 Want to showcase your OV-Panel-related project? We'd love to see it!
